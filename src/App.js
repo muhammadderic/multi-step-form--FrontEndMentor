@@ -7,7 +7,7 @@ function App() {
   return (
     <div id="app-container">
       <Sidebar />
-      <MainContent />
+      <MainContent title="Personal info" subtitle="Please provide your name, email address, and phone number." />
       <StepButtons />
     </div>
   );
