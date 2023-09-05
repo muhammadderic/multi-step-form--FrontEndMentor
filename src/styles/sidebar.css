@@ -31,3 +31,67 @@
   background-color: hsl(228, 100%, 84%);
   color: #000;
 }
+
+@media (min-width: 1024px) {
+  #sidebar {
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /*  */
+    height: 100%;
+    padding: 2rem;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-row: 1/ span 2;
+    gap: 2rem;
+    background: url(../assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+  }
+
+  .step-wrapper {
+    /*  */
+    display: flex;
+    gap: 1rem;
+  }
+
+  .step__circle {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  .step__detail {
+    /*  */
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+
+  .step__title {
+    /*  */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .step__text {
+    /*  */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .active {
+    background-color: hsl(228, 100%, 84%);
+    color: #000;
+  }
+}
