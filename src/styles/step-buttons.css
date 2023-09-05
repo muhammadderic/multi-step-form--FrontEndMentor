@@ -1,10 +1,11 @@
 #step-buttons {
   width: 100%;
+  margin-top: 2rem;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 

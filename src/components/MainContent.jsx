@@ -1,4 +1,5 @@
-import PersonalInfo from "./PersonalInfo";
+// import PersonalInfo from "./PersonalInfo";
+import UserPlan from "./UserPlan";
 import "../styles/main-content.css";
 
 function MainContent({ title, subtitle }) {
@@ -8,7 +9,8 @@ function MainContent({ title, subtitle }) {
         <h1 className="main-content__title">{title}</h1>
         <p className="main-content__subtitle">{subtitle}</p>
       </div>
-      <PersonalInfo />
+      {/* <PersonalInfo /> */}
+      <UserPlan />
     </div>
   )
 }

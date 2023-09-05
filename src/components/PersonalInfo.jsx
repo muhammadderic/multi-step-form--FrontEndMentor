@@ -1,3 +1,5 @@
+import "../styles/personal-info.css";
+
 function PersonalInfo() {
   return (
     <form>
