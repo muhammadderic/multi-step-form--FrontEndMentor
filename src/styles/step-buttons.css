@@ -16,6 +16,11 @@
   border-radius: .2rem;
 }
 
+.btn:hover {
+  background-color: #fff;
+  color: hsl(213, 96%, 18%);
+}
+
 @media (min-width: 1024px) {
   #step-buttons {
     width: 90%;
