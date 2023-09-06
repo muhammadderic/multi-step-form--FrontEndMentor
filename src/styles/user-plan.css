@@ -62,3 +62,15 @@
   font-weight: 700;
   color: hsl(213, 96%, 18%);
 }
+
+@media (min-width: 1028px) {
+  .user-plans {
+    flex-direction: row;
+  }
+
+  .user-plan {
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2rem;
+  }
+}
