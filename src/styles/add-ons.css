@@ -29,6 +29,7 @@
 .add-on__title {
   font-size: .8rem;
   font-weight: 700;
+  color: hsl(213, 96%, 18%);
 }
 
 .add-on__text {
@@ -38,4 +39,18 @@
 
 .add-on__price {
   color: hsl(243, 100%, 62%);
+}
+
+@media (min-width: 1028px) {
+  #add-ons {
+    gap: 1rem;
+  }
+
+  .add-on__title {
+    font-size: 1rem;
+  }
+
+  .add-on__text {
+    font-size: 1rem;
+  }
 }
