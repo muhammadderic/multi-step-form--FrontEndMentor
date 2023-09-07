@@ -1,0 +1,41 @@
+#add-ons {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.add-on {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: .5rem;
+}
+
+.add-on__checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.add-on__checkbox:checked {
+  accent-color: hsl(243, 100%, 62%);
+}
+
+.add-on__detail {
+  flex: 2;
+}
+
+.add-on__title {
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.add-on__text {
+  font-size: .8rem;
+  color: hsl(231, 11%, 63%);
+}
+
+.add-on__price {
+  color: hsl(243, 100%, 62%);
+}
