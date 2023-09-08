@@ -1,6 +1,7 @@
 // import PersonalInfo from "./PersonalInfo";
 // import UserPlan from "./UserPlan";
-import AddOns from "./AddOns";
+// import AddOns from "./AddOns";
+import Summary from "./Summary";
 import "../styles/main-content.css";
 
 function MainContent({ title, subtitle }) {
@@ -12,7 +13,8 @@ function MainContent({ title, subtitle }) {
       </div>
       {/* <PersonalInfo /> */}
       {/* <UserPlan /> */}
-      <AddOns />
+      {/* <AddOns /> */}
+      <Summary />
     </div>
   )
 }

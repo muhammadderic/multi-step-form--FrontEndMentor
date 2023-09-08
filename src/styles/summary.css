@@ -1,0 +1,38 @@
+.summary__box {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: .5rem;
+}
+
+.summary__box__child {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text__add-on,
+.summary__box__first-price {
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.summary__box__text {
+  color: hsl(231, 11%, 63%);
+}
+
+.summary__line {
+  border: 1px solid hsl(229, 24%, 87%);
+}
+
+.summary__total-wrapper {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total__price {
+  font-weight: 700;
+  color: hsl(243, 100%, 62%);
+}
