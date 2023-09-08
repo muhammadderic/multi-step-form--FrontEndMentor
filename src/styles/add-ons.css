@@ -13,6 +13,10 @@
   border-radius: .5rem;
 }
 
+.add-on:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
 .add-on__checkbox {
   width: 20px;
   height: 20px;
