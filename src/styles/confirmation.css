@@ -1,0 +1,21 @@
+#confirmation {
+  padding: 2rem .5rem;
+  text-align: center;
+}
+
+.confirmation__icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.confirmation__title {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.confirmation__text {
+  line-height: 1.5rem;
+  color: hsl(231, 11%, 63%);
+}
