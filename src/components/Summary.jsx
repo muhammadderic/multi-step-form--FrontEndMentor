@@ -7,7 +7,7 @@ function Summary() {
         <div className="summary__box__child">
           <div className="summary__box__first-text">
             <p className="text__add-on">Arcade (Monthly)</p>
-            <a href="/">Change</a>
+            <a href="/" className="text__add-on__link">Change</a>
           </div>
           <div className="summary__box__first-price">
             $90/yr

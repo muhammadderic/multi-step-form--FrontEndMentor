@@ -18,6 +18,10 @@
   color: hsl(213, 96%, 18%);
 }
 
+.text__add-on__link:visited {
+  color: hsl(243, 100%, 62%);
+}
+
 .summary__box__text {
   color: hsl(231, 11%, 63%);
 }
