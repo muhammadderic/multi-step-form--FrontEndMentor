@@ -22,6 +22,10 @@
   color: hsl(213, 96%, 18%);
 }
 
+.next-alone {
+  margin-left: auto;
+}
+
 @media (min-width: 1024px) {
   #step-buttons {
     width: 90%;
