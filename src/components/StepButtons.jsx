@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { validatePersonalInfo } from "./personalInfoReducer";
+import { validatePersonalInfo, changeStep } from "./personalInfoReducer";
 import "../styles/step-buttons.css";
 
 function StepButtons() {
@@ -9,6 +9,7 @@ function StepButtons() {
 
   const handleNext = () => {
     dispatch(validatePersonalInfo());
+    dispatch(changeStep({ direction: "next" }));
   }
 
   const handlePrev = () => {
