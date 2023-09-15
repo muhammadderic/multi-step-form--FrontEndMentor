@@ -1,16 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import { validatePersonalInfo } from "./personalInfoReducer";
-import { changeStep } from "./personalInfoReducer";
+import { changeStep, changeStepFromStepOne } from "./stepReducer";
 import "../styles/step-buttons.css";
 
 function StepButtons() {
   const dispatch = useDispatch();
   const step = useSelector(state => state.stepReducer.step);
+  const { personalInfoData } = useSelector(state => state.personalInfoReducer);
 
   const handleNext = () => {
     if (step === 0) {
       dispatch(validatePersonalInfo());
-    } else if (step <= 4) {
+      dispatch(changeStepFromStepOne({ direction: "next", personalInfoData }));
+    }
+    if (step > 0 && step <= 4) {
       dispatch(changeStep({ direction: "next" }));
     }
   }
