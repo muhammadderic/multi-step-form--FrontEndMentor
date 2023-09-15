@@ -1,16 +1,19 @@
+import { useSelector } from "react-redux";
 import "../styles/summary.css";
 
 function Summary() {
+  const { userPlanSelected, userPlanTime } = useSelector(state => state.userPlanReducer);
+
   return (
     <div id="summary">
       <div className="summary__box">
         <div className="summary__box__child">
           <div className="summary__box__first-text">
-            <p className="text__add-on">Arcade (Monthly)</p>
+            <p className="text__add-on">{userPlanSelected.userPlanTitle} ({userPlanTime})</p>
             <a href="/" className="text__add-on__link">Change</a>
           </div>
           <div className="summary__box__first-price">
-            $90/yr
+            ${userPlanSelected.userPlanPrice}/yr
           </div>
         </div>
         <div className="summary__line"></div>

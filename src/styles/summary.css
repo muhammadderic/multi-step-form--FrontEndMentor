@@ -12,6 +12,10 @@
   justify-content: space-between;
 }
 
+.text__add-on {
+  text-transform: capitalize;
+}
+
 .text__add-on,
 .summary__box__first-price {
   font-weight: 700;
