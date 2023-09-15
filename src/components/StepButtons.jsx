@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { validatePersonalInfo } from "./personalInfoReducer";
 import { changeStep, changeStepFromStepOne } from "./stepReducer";
+import { addOnsSelected, priceAddOnsSeleceted } from "./addOnsReducer";
 import "../styles/step-buttons.css";
 
 function StepButtons() {
@@ -14,6 +15,10 @@ function StepButtons() {
       dispatch(changeStepFromStepOne({ direction: "next", personalInfoData }));
     }
     if (step > 0 && step <= 4) {
+      if (step === 2) {
+        dispatch(addOnsSelected())
+        dispatch(priceAddOnsSeleceted())
+      }
       dispatch(changeStep({ direction: "next" }));
     }
   }

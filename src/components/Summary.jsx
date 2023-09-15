@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
+import SummaryAddOn from "./SummaryAddOn";
 import "../styles/summary.css";
 
 function Summary() {
   const { userPlanSelected, userPlanTime } = useSelector(state => state.userPlanReducer);
+  const { addOnsSelectedData, totalAddOnsSelectedPrice } = useSelector(state => state.addOnsReducer);
 
   return (
     <div id="summary">
@@ -17,18 +19,16 @@ function Summary() {
           </div>
         </div>
         <div className="summary__line"></div>
-        <div className="summary__box__child">
-          <div className="summary__box__text">Online service</div>
-          <div className="summary__box__price">+$10/yr</div>
-        </div>
-        <div className="summary__box__child">
-          <div className="summary__box__text">Large storage</div>
-          <div className="summary__box__price">+$20/yr</div>
-        </div>
+        {addOnsSelectedData.map(addOnData => {
+          return <SummaryAddOn
+            key={addOnData.addOnTitle}
+            title={addOnData.addOnTitle}
+            price={addOnData.addOnPrice} />
+        })}
       </div>
       <div className="summary__total-wrapper">
         <p className="summary__box__text">Total (per-year)</p>
-        <p className="total__price">$120/yr</p>
+        <p className="total__price">${totalAddOnsSelectedPrice}/yr</p>
       </div>
     </div>
   )

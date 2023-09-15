@@ -21,6 +21,8 @@ const initialState = {
       addOnStatus: false,
     },
   },
+  addOnsSelectedData: [],
+  totalAddOnsSelectedPrice: 0,
 }
 
 const addOnsReducer = createSlice({
@@ -46,12 +48,33 @@ const addOnsReducer = createSlice({
           addOnStatus: !status,
         }
       }
+    },
+    addOnsSelected: (state) => {
+      const { onlineService, largeStorage, customizableProfile } = state.addOnsData;
+      if (onlineService.addOnStatus) {
+        state.addOnsSelectedData = [...state.addOnsSelectedData, onlineService];
+      }
+      if (largeStorage.addOnStatus) {
+        state.addOnsSelectedData = [...state.addOnsSelectedData, largeStorage];
+      }
+      if (customizableProfile.addOnStatus) {
+        state.addOnsSelectedData = [...state.addOnsSelectedData, customizableProfile];
+      }
+    },
+    priceAddOnsSeleceted: (state) => {
+      let price = 0;
+      state.addOnsSelectedData.map(data => {
+        return price += data.addOnPrice;
+      })
+      state.totalAddOnsSelectedPrice = price;
     }
   }
 })
 
 export const {
   updateAddOns,
+  addOnsSelected,
+  priceAddOnsSeleceted,
 } = addOnsReducer.actions;
 
 export default addOnsReducer.reducer;
