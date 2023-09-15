@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  userPlanData: [],
+  userPlanData: "",
 }
 
 const userPlanReducer = createSlice({
@@ -10,14 +10,7 @@ const userPlanReducer = createSlice({
   reducers: {
     updateUserPlan: (state, action) => {
       const { userPlan } = action.payload;
-      if (state.userPlanData.includes(userPlan)) {
-        const userPlanData = state.userPlanData;
-        const userPlanDataFilter = userPlanData.filter(userData => userData !== userPlan);
-        state.userPlanData = userPlanDataFilter;
-      } else {
-        const newUserPlanData = [...state.userPlanData, userPlan];
-        state.userPlanData = newUserPlanData;
-      }
+      state.userPlanData = userPlan;
     }
   }
 })

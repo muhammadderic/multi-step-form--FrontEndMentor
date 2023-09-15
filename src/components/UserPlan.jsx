@@ -4,18 +4,17 @@ import "../styles/user-plan.css";
 
 function UserPlan() {
   const dispatch = useDispatch();
-  const userPlanState = useSelector(state => state.userPlanReducer.userPlanData);
+  const { userPlanData } = useSelector(state => state.userPlanReducer);
 
   const userPlanHandler = (e) => {
-    const userPlanStatus = e.target.dataset.title;
-    dispatch(updateUserPlan({ userPlan: userPlanStatus }));
+    dispatch(updateUserPlan({ userPlan: e.target.dataset.title }));
   }
 
   return (
     <div id="user-plan-wrapper">
       <div className="user-plans">
         <div
-          className={`user-plan ${userPlanState.includes("arcade") ? "user-plan__selected" : ""}`}
+          className={`user-plan ${userPlanData === "arcade" ? "user-plan__selected" : ""}`}
           data-title="arcade"
           onClick={userPlanHandler}>
           <div className="user-plan__icon">
@@ -28,7 +27,7 @@ function UserPlan() {
           </div>
         </div>
         <div
-          className={`user-plan ${userPlanState.includes("advanced") ? "user-plan__selected" : ""}`}
+          className={`user-plan ${userPlanData === "advanced" ? "user-plan__selected" : ""}`}
           data-title="advanced"
           onClick={userPlanHandler}>
           <div className="user-plan__icon">
@@ -41,7 +40,7 @@ function UserPlan() {
           </div>
         </div>
         <div
-          className={`user-plan ${userPlanState.includes("pro") ? "user-plan__selected" : ""}`}
+          className={`user-plan ${userPlanData === "pro" ? "user-plan__selected" : ""}`}
           data-title="pro"
           onClick={userPlanHandler}>
           <div className="user-plan__icon">
