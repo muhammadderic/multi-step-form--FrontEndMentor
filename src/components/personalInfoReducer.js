@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  step: 1,
+  step: 0,
   // Define the initial form data
   personalInfoData: {
     name: "",
@@ -48,13 +48,15 @@ const personalInfoReducer = createSlice({
     changeStep: (state, action) => {
       const { name, email, phone } = state.personalInfoData;
       const { direction } = action.payload;
-      if (name && email && phone) {
-        if (direction === "next") {
+      if (direction === "next") {
+        if (state.step === 0 && name && email && phone) {
           state["step"] += 1;
-        } else if (direction === "prev") {
-          if (state.step > 0) {
-            state["step"] -= 1;
-          }
+        } else if (state.step === 1) {
+          state["step"] += 1;
+        }
+      } else if (direction === "prev") {
+        if (state.step > 0) {
+          state["step"] -= 1;
         }
       }
     },

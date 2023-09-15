@@ -7,7 +7,9 @@ function StepButtons() {
   const step = useSelector(state => state.step);
 
   const handleNext = () => {
-    dispatch(validatePersonalInfo());
+    if (step === 0) {
+      dispatch(validatePersonalInfo());
+    }
     dispatch(changeStep({ direction: "next" }));
   }
 
