@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar";
 import './styles/App.css';
 
 function App() {
-  const step = useSelector(state => state.personalInfoReducer.step);
+  const step = useSelector(state => state.stepReducer.step);
 
   return (
     <div id="app-container">

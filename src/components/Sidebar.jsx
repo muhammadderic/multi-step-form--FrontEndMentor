@@ -3,7 +3,7 @@ import SidebarItem from "./SidebarItem";
 import "../styles/sidebar.css";
 
 function Sidebar() {
-  const step = useSelector(state => state.personalInfoReducer.step);
+  const step = useSelector(state => state.stepReducer.step);
 
   return (
     <div id="sidebar">

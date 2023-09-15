@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { validatePersonalInfo, changeStep } from "./personalInfoReducer";
+import { validatePersonalInfo } from "./personalInfoReducer";
+import { changeStep } from "./personalInfoReducer";
 import "../styles/step-buttons.css";
 
 function StepButtons() {
   const dispatch = useDispatch();
-  const step = useSelector(state => state.personalInfoReducer.step);
+  const step = useSelector(state => state.stepReducer.step);
 
   const handleNext = () => {
     if (step === 0) {
