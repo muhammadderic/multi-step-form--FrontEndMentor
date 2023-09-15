@@ -1,32 +1,20 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateUserPlan } from "./personalInfoReducer";
 import "../styles/user-plan.css";
 
 function UserPlan() {
+  const dispatch = useDispatch();
   const [userPlanData, setUserPlanData] = useState([]);
+  const userPlanState = useSelector(state => state.userPlanData);
 
   useEffect(() => {
-    console.log(userPlanData);
-  }, [userPlanData]);
-
-  const addItemToArray = (item) => {
-    if (userPlanData.includes(item)) {
-      const filterUserPlanData = userPlanData.filter(userData => userData !== item)
-      return setUserPlanData(filterUserPlanData);
-    }
-    return setUserPlanData([...userPlanData, item]);
-  }
+    console.log(userPlanState);
+  }, [userPlanState]);
 
   const userPlanHandler = (e) => {
-    switch (e.target.dataset.title) {
-      case "advanced":
-        addItemToArray("advanced");
-        break;
-      case "pro":
-        addItemToArray("pro");
-        break;
-      default:
-        addItemToArray("arcade");
-    }
+    const userPlanStatus = e.target.dataset.title;
+    dispatch(updateUserPlan({ userPlan: userPlanStatus }));
   }
 
   return (
