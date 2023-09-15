@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 

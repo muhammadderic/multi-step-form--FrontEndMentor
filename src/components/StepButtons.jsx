@@ -5,7 +5,6 @@ import "../styles/step-buttons.css";
 function StepButtons() {
   const dispatch = useDispatch();
   const step = useSelector(state => state.step);
-  const personalInfoData = useSelector(state => state.personalInfoData);
 
   const handleNext = () => {
     dispatch(validatePersonalInfo());
@@ -13,7 +12,7 @@ function StepButtons() {
   }
 
   const handlePrev = () => {
-    console.log(personalInfoData);
+    dispatch(changeStep({ direction: "prev" }));
   };
 
   return (

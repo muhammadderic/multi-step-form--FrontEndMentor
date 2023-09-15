@@ -50,6 +50,10 @@ const personalInfoReducer = createSlice({
       if (name && email && phone) {
         if (direction === "next") {
           state["step"] += 1;
+        } else if (direction === "prev") {
+          if (state.step > 0) {
+            state["step"] -= 1;
+          }
         }
       }
     }
