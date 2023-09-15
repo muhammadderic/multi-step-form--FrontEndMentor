@@ -9,7 +9,6 @@ function UserPlan() {
   const { arcade, advanced, pro } = userPlanData;
 
   const userPlanHandler = (e) => {
-    console.log(userPlanSelected)
     dispatch(updateUserPlan({ userPlan: e.target.dataset.title }));
   }
 

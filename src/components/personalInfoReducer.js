@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   personalInfoData: {
-    name: "de",
-    email: "de",
-    phone: "12",
+    name: "",
+    email: "",
+    phone: "",
   },
   errors: {
     errorName: false,

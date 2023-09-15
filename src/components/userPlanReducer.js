@@ -37,16 +37,6 @@ const userPlanReducer = createSlice({
       } else if (pro.userPlanTitle === userPlan) {
         state.userPlanSelected = { ...pro };
       }
-      // if (arcade.userPlanTitle === userPlan) {
-      //   state.userPlanSelected.userTitle = arcade.userPlanTitle;
-      //   state.userPlanSelected.userPrice = arcade.userPlanPrice;
-      // } else if (advanced.userPlanTitle === userPlan) {
-      //   state.userPlanSelected.userTitle = advanced.userPlanTitle;
-      //   state.userPlanSelected.userPrice = advanced.userPlanPrice;
-      // } else if (pro.userPlanTitle === userPlan) {
-      //   state.userPlanSelected.userTitle = pro.userPlanTitle;
-      //   state.userPlanSelected.userPrice = pro.userPlanPrice;
-      // }
     },
     updateUserPlanTime: (state, action) => {
       const { time } = action.payload;

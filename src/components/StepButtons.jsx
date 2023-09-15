@@ -8,6 +8,8 @@ function StepButtons() {
   const dispatch = useDispatch();
   const step = useSelector(state => state.stepReducer.step);
   const { personalInfoData } = useSelector(state => state.personalInfoReducer);
+  const { userPlanSelected } = useSelector(state => state.userPlanReducer);
+  const { addOnsSelectedData } = useSelector(state => state.addOnsReducer);
 
   const handleNext = () => {
     if (step === 0) {
@@ -28,6 +30,12 @@ function StepButtons() {
   };
 
   const handleSubmit = () => {
+    const data = {
+      personalInfoData,
+      userPlanSelected,
+      addOnsSelectedData,
+    }
+    console.log(data);
     dispatch(changeStep({ direction: "last" }));
   }
 
