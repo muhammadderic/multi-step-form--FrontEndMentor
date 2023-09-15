@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateUserPlan } from "./personalInfoReducer";
+import { updateUserPlan } from "./userPlanReducer";
 import "../styles/user-plan.css";
 
 function UserPlan() {
   const dispatch = useDispatch();
-  const userPlanState = useSelector(state => state.personalInfoReducer.userPlanData);
+  const userPlanState = useSelector(state => state.userPlanReducer.userPlanData);
 
   const userPlanHandler = (e) => {
     const userPlanStatus = e.target.dataset.title;
