@@ -13,6 +13,10 @@
   border-radius: .5rem;
 }
 
+.add-on__selected {
+  background-color: hsl(206, 94%, 87%);
+}
+
 .add-on:hover {
   border: 1px solid hsl(243, 100%, 62%);
 }

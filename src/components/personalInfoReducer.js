@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  step: 0,
-  // Define the initial form data
+  step: 2,
   personalInfoData: {
     name: "",
     email: "",

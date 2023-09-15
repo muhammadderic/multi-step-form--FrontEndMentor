@@ -4,8 +4,8 @@ import "../styles/personal-info.css";
 
 function PersonalInfo() {
   const dispatch = useDispatch();
-  const { name: storeName, email: storeEmail, phone: storePhone } = useSelector(state => state.personalInfoData);
-  const { errorName, errorEmail, errorPhone } = useSelector(state => state.errors);
+  const { name: storeName, email: storeEmail, phone: storePhone } = useSelector(state => state.personalInfoReducer.personalInfoData);
+  const { errorName, errorEmail, errorPhone } = useSelector(state => state.personalInfoReducer.errors);
 
   const handleChange = (e) => {
     // Get the name and value from the event target

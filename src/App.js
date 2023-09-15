@@ -5,7 +5,7 @@ import './styles/App.css';
 import { useSelector } from "react-redux";
 
 function App() {
-  const step = useSelector(state => state.step);
+  const step = useSelector(state => state.personalInfoReducer.step);
 
   return (
     <div id="app-container">

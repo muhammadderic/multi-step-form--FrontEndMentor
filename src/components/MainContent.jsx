@@ -8,7 +8,7 @@ import Confirmation from "./Confirmation";
 import "../styles/main-content.css";
 
 function MainContent({ title, subtitle }) {
-  const step = useSelector(state => state.step);
+  const step = useSelector(state => state.personalInfoReducer.step);
 
   return (
     <div id="main-content">

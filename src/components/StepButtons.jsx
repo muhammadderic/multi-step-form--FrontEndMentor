@@ -4,7 +4,7 @@ import "../styles/step-buttons.css";
 
 function StepButtons() {
   const dispatch = useDispatch();
-  const step = useSelector(state => state.step);
+  const step = useSelector(state => state.personalInfoReducer.step);
 
   const handleNext = () => {
     if (step === 0) {
