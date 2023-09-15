@@ -59,6 +59,11 @@
   border-radius: .5rem;
 }
 
+.switch-time__yearly {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .switch-time__circle {
   width: 17px;
   height: 17px;

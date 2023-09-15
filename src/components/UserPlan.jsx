@@ -1,13 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateUserPlan } from "./userPlanReducer";
+import { updateUserPlan, updateUserPlanTime } from "./userPlanReducer";
 import "../styles/user-plan.css";
 
 function UserPlan() {
   const dispatch = useDispatch();
-  const { userPlanData } = useSelector(state => state.userPlanReducer);
+  const { userPlanData, userPlanTime } = useSelector(state => state.userPlanReducer);
 
   const userPlanHandler = (e) => {
     dispatch(updateUserPlan({ userPlan: e.target.dataset.title }));
+  }
+
+  const userPlanTimesHandler = () => {
+    let newUserPlanTime = userPlanTime;
+    if (newUserPlanTime === "monthly") {
+      newUserPlanTime = "yearly";
+    } else {
+      newUserPlanTime = "monthly";
+    }
+    dispatch(updateUserPlanTime({ time: newUserPlanTime }))
   }
 
   return (
@@ -54,11 +64,11 @@ function UserPlan() {
         </div>
       </div>
       <div className="user-plan__switch-time">
-        <p className="switch-time__text text-active">monthly</p>
-        <div className="switch-time__box">
+        <p className={`switch-time__text ${userPlanTime === "monthly" ? "text-active" : ""}`}>monthly</p>
+        <div className={`switch-time__box ${userPlanTime === "yearly" ? "switch-time__yearly" : ""}`} onClick={userPlanTimesHandler}>
           <div className="switch-time__circle"></div>
         </div>
-        <p className="switch-time__text">yearly</p>
+        <p className={`switch-time__text ${userPlanTime === "yearly" ? "text-active" : ""}`}>yearly</p>
       </div>
     </div>
   )

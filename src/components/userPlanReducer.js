@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   userPlanData: "",
+  userPlanTime: "monthly",
 }
 
 const userPlanReducer = createSlice({
@@ -11,10 +12,14 @@ const userPlanReducer = createSlice({
     updateUserPlan: (state, action) => {
       const { userPlan } = action.payload;
       state.userPlanData = userPlan;
+    },
+    updateUserPlanTime: (state, action) => {
+      const { time } = action.payload;
+      state.userPlanTime = time;
     }
   }
 })
 
-export const { updateUserPlan } = userPlanReducer.actions;
+export const { updateUserPlan, updateUserPlanTime } = userPlanReducer.actions;
 
 export default userPlanReducer.reducer;
