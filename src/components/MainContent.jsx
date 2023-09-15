@@ -9,7 +9,6 @@ import "../styles/main-content.css";
 
 function MainContent({ title, subtitle }) {
   const step = useSelector(state => state.personalInfoReducer.step);
-
   return (
     <div id="main-content">
       {step !== 4 && <MainContentTitle title={title} subtitle={subtitle} />}
