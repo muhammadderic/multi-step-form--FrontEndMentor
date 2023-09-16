@@ -36,12 +36,12 @@
 @media (min-width: 1024px) {
   #sidebar {
     height: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
     grid-row: 1/ span 2;
-    gap: 2rem;
+    gap: 1.5rem;
     background: url(../assets/images/bg-sidebar-desktop.svg);
     background-size: cover;
     background-position: center;
@@ -54,8 +54,8 @@
   }
 
   .step__circle {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,11 +71,13 @@
   }
 
   .step__title {
+    font-size: .8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 
   .step__text {
+    font-size: .8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -84,5 +86,32 @@
   .active {
     background-color: hsl(228, 100%, 84%);
     color: #000;
+  }
+}
+
+@media (min-width: 1440px) {
+  #sidebar {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .step-wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .step__circle {
+    height: 40px;
+    width: 40px;
+  }
+
+  .step__title {
+    font-size: 1rem;
+  }
+
+  .step__text {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
 }

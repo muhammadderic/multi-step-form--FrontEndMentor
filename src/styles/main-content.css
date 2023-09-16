@@ -28,8 +28,27 @@
 @media (min-width: 1024px) {
   #main-content {
     margin: 0 auto;
-    padding: 3rem;
+    padding: 1rem 2rem;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  }
+
+  .main-content__top {
+    padding-bottom: 1rem;
+  }
+
+  .main-content__title {
+    margin: .2rem 0;
+    font-size: 1.7rem;
+  }
+
+  .main-content__subtitle {
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #main-content {
+    padding: 3rem;
   }
 
   .main-content__top {

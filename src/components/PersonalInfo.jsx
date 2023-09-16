@@ -17,17 +17,17 @@ function PersonalInfo() {
   return (
     <form>
       <div className="input-wrapper">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name" className="input__label">Name</label>
         <input className="content__input input-border" type="text" id="name" name="name" defaultValue={name} onChange={handleChange} placeholder="e.g. Stephen King" />
         <p className={`error-input ${errorName ? "" : "error-display-none"}`}>This field is required</p>
       </div>
       <div className="input-wrapper">
-        <label htmlFor="email">Email Address</label>
+        <label htmlFor="email" className="input__label">Email Address</label>
         <input className="content__input input-border" type="text" id="email" name="email" defaultValue={email} onChange={handleChange} placeholder="e.g. stephenking@lorem.com" />
         <p className={`error-input ${errorEmail ? "" : "error-display-none"}`}>This field is required</p>
       </div>
       <div className="input-wrapper">
-        <label htmlFor="phone">Phone Number</label>
+        <label htmlFor="phone" className="input__label">Phone Number</label>
         <input className="content__input" type="tel" id="phone" name="phone" defaultValue={phone} onChange={handleChange} placeholder="e.g. +1 234 567 890" />
         <p className={`error-input ${errorPhone ? "" : "error-display-none"}`}>This field is required</p>
       </div>

@@ -24,6 +24,7 @@
 .add-on__checkbox {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .add-on__checkbox:checked {
@@ -49,7 +50,21 @@
   color: hsl(243, 100%, 62%);
 }
 
-@media (min-width: 1028px) {
+@media (min-width: 1024px) {
+  #add-ons {
+    gap: .5rem;
+  }
+
+  .add-on__title {
+    font-size: .8rem;
+  }
+
+  .add-on__text {
+    font-size: .8rem;
+  }
+}
+
+@media (min-width: 1440px) {
   #add-ons {
     gap: 1rem;
   }

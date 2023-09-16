@@ -44,3 +44,33 @@
   font-weight: 700;
   color: hsl(243, 100%, 62%);
 }
+
+@media (min-width: 1028px) {
+  .summary__box {
+    padding: .5rem;
+  }
+
+  .summary__box__child {
+    padding: .5rem;
+  }
+
+  .text__add-on {
+    font-size: .8rem;
+  }
+
+  .text__add-on__link {
+    font-size: .8rem;
+  }
+
+  .summary__box__text {
+    font-size: .8rem;
+  }
+
+  .summary__total-wrapper {
+    padding: 1rem;
+  }
+
+  .total__price {
+    font-size: 1rem;
+  }
+}

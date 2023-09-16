@@ -24,9 +24,9 @@ body {
   }
 
   #app-container {
-    width: 70vw;
+    width: 60vw;
     height: 75vh;
-    padding: 1rem;
+    padding: .5rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 80% 20%;
@@ -34,5 +34,12 @@ body {
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     overflow: hidden;
+  }
+}
+
+@media (min-width: 1440px) {
+  #app-container {
+    width: 70vw;
+    padding: 1rem;
   }
 }
